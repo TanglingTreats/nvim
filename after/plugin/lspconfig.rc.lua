@@ -188,6 +188,10 @@ nvim_lsp.gopls.setup {
   on_attach = on_attach
 }
 
+nvim_lsp.asm_lsp.setup {
+  on_attach = on_attach,
+}
+
 -- YAML
 nvim_lsp.yamlls.setup {
   on_attach = on_attach
