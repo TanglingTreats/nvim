@@ -3,6 +3,8 @@ require("mason-lspconfig").setup();
 
 local status, nvim_lsp = pcall(require, 'lspconfig')
 
+local root_pattern = nvim_lsp.util.root_pattern
+
 if not status then return end
 
 local protocol = require('vim.lsp.protocol')
@@ -82,6 +84,7 @@ nvim_lsp.ccls.setup {
       directory = "/tmp/ccls-cache",
     }
   },
+  root_dir = root_pattern('.clang-format', 'compile_commands.json', '.ccls', '.git'),
   on_attach = on_attach
 }
 
