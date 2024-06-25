@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 plugin/packer_compiled.lua
+=======
+./plugin/packer_compiled.lua
+>>>>>>> fe89e8d64a4b457b636a2252cdcd9df23a10a006
