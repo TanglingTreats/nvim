@@ -56,7 +56,7 @@ end
 
 
 -- Typescript LSP
-nvim_lsp.tsserver.setup {
+nvim_lsp.ts_ls.setup {
   on_attach = on_attach,
   filetypes = { "javascript", "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" }
@@ -192,6 +192,11 @@ nvim_lsp.gopls.setup {
 }
 
 nvim_lsp.asm_lsp.setup {
+  on_attach = on_attach,
+}
+
+nvim_lsp.omnisharp.setup {
+  cmd = { "dotnet" },
   on_attach = on_attach,
 }
 
