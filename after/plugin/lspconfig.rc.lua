@@ -58,7 +58,7 @@ end
 -- Typescript LSP
 nvim_lsp.ts_ls.setup {
   on_attach = on_attach,
-  filetypes = { "javascript", "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" }
 }
 
