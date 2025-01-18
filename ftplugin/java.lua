@@ -81,7 +81,7 @@ local config = {
     '-Xmx4g',
     '-jar', returnJdtlsPath(),
     '-configuration', home .. returnCacheFolder(),
-    '-data', home .. '/.cache/jdtls-workspace' .. workspace_dir
+    '-data', home .. '/.cache/jdtls-workspace-' .. workspace_dir
   },
   root_dir = vim.fs.dirname(vim.fs.find({ 'gradlew', '.git', 'mvnw' }, { upward = true })[1]),
 }
