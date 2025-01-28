@@ -45,3 +45,8 @@ set.textwidth = 0
 set.wrapmargin = 0
 set.wrap = true
 set.linebreak = true
+
+-- Global functions
+function pack(...)
+  return { n = select("#", ...), ... }
+end

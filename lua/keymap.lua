@@ -1,15 +1,16 @@
 -- Remap leader
+
 vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+local opts = { remap = false, silent = true }
+
 -- Edit init file
-keymap.set("n", "<Leader>tc", ":tabedit $MYVIMRC<Return>")
+keymap.set("n", "<Leader>tc", ":tabedit $MYVIMRC<Return>", opts)
+keymap.set("n", "<Leader>rc", ":so $MYVIMRC<Return>", opts)
 
 -- Tab movements
-keymap.set("n", "<Leader>te", ":tabedit<Return>")
-
-local opts = { noremap = true, silent = true }
 keymap.set("n", "<S-Tab>", "<cmd>bprev<CR>", opts)
 keymap.set("n", "<Tab>", "<cmd>bnext<CR>", opts)
 
@@ -38,3 +39,14 @@ keymap.set('n', '<leader>gpp', function() vim.cmd("Git push") end, opts)
 keymap.set('n', '<leader>gpl', function() vim.cmd("Git pull") end, opts)
 keymap.set('n', '<leader>gf', function() vim.cmd("Git diff") end, opts)
 keymap.set('n', '<leader>gc', function() vim.cmd("Git diff --cached") end, opts)
+
+local function duplicate_line()
+  -- Get current cursor position
+  local r, c = unpack(vim.api.nvim_win_get_cursor(0))
+  vim.cmd.normal("yyp")
+  vim.api.nvim_win_set_cursor(0, { r + 1, c })
+end
+
+keymap.set('n', '<leader>,', function()
+  duplicate_line()
+end, opts)
