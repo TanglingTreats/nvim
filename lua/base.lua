@@ -30,10 +30,11 @@ set.statusline = "%f - Filetype:%y"
 set.laststatus = 2
 
 -- Folding
-set.foldcolumn = '1'
+set.foldcolumn = '3'
 set.foldlevel = 99
 set.foldlevelstart = 99
 set.foldenable = true
+set.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldclose:'
 
 set_local.updatetime = 100
 
@@ -47,6 +48,6 @@ set.wrap = true
 set.linebreak = true
 
 -- Global functions
-function pack(...)
+function Pack(...)
   return { n = select("#", ...), ... }
 end

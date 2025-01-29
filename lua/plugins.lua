@@ -23,8 +23,8 @@ vim.cmd [[packadd packer.nvim]]
 
 
 packer.startup(function(use)
-  -- Color schemes
-  use { "ellisonleao/gruvbox.nvim" } -- Theme
+  -- Color schemes --
+  use { "ellisonleao/gruvbox.nvim" }
   use({
     "neanias/everforest-nvim",
     -- Optional; default configuration will be used if setup isn't called.
@@ -33,9 +33,9 @@ packer.startup(function(use)
     end,
   })
 
-  -- Utility
+  -- Utility --
   use 'nvim-lua/plenary.nvim' -- Lua functions
-  use {
+  use {                       -- Document marks
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
     requires = { { "nvim-lua/plenary.nvim" } }
@@ -49,7 +49,7 @@ packer.startup(function(use)
     "lazytanuki/nvim-mapper",
     before = "telescope.nvim"
   }
-  use 'MunifTanjim/nui.nvim'
+  use 'MunifTanjim/nui.nvim' -- UI Component Library
 
   use { 'nvim-treesitter/nvim-treesitter',
     run = function()
@@ -102,10 +102,10 @@ packer.startup(function(use)
   -- Formatters
   use 'nvimtools/none-ls.nvim'    -- Set nvim as LSP
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for nvim
-  use 'windwp/nvim-ts-autotag'
+  use 'windwp/nvim-ts-autotag'    -- Autoclose brackets
   use 'windwp/nvim-autopairs'     -- Bracket plugin
   use {
-    'numToStr/Comment.nvim',
+    'numToStr/Comment.nvim',      -- Block comments
     config = function()
       require('Comment').setup()
     end
