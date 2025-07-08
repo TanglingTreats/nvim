@@ -77,13 +77,7 @@ nvim_lsp.cssls.setup {
 }
 
 -- C/C++
-nvim_lsp.ccls.setup {
-  init_options = {
-    cache = {
-      directory = "/tmp/ccls-cache",
-    }
-  },
-  root_dir = root_pattern('.clang-format', 'compile_commands.json', '.ccls', '.git'),
+nvim_lsp.clangd.setup {
   on_attach = on_attach
 }
 
