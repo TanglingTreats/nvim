@@ -1,9 +1,9 @@
 require("mason").setup();
 require("mason-lspconfig").setup();
 
-local status, nvim_lsp = pcall(require, 'lspconfig')
+local nvim_lsp = vim.lsp.config
 
-local root_pattern = nvim_lsp.util.root_pattern
+local root_pattern = vim.lsp.util.root_pattern
 
 if not status then return end
 
