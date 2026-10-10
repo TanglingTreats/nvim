@@ -64,4 +64,4 @@ everforest.setup({
   colours_override = function(palette) end,
 })
 
-vim.cmd([[colorscheme everforest]])
+everforest.load()

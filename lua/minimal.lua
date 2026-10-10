@@ -1,3 +1,4 @@
+-- For debugging purposes only
 vim.cmd [[set runtimepath=$VIMRUNTIME]]
 vim.cmd [[set packpath=/tmp/nvim/site]]
 local package_root = '/tmp/nvim/site/pack'
