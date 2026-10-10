@@ -30,7 +30,7 @@ set.statusline = "%f - Filetype:%y"
 set.laststatus = 2
 
 -- Folding
-set.foldcolumn = '5'
+set.foldcolumn = '3'
 set.foldlevel = 99
 set.foldlevelstart = 99
 set.foldenable = true
